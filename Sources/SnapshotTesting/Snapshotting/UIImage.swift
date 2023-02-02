@@ -183,6 +183,7 @@ func perceptuallyCompare(_ old: CIImage, _ new: CIImage, pixelPrecision: Float, 
       arguments: [ThresholdImageProcessorKernel.inputThresholdKey: (1 - perceptualPrecision) * 100]
     )
   } catch {
+      print("🧨 Error thrown: \(error)")
     return "Newly-taken snapshot's data could not be loaded. \(error)"
   }
   var averagePixel: Float = 0
